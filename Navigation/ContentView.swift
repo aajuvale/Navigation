@@ -8,32 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State
+    private var title = "SwiftUI"
 
     var body: some View {
         NavigationStack {
-            Text("Hello World!")
-                .toolbar {
-//                    ToolbarItem(placement: .confirmationAction) {
-//                        Button("Tap me") {
-//                            // Button action
-//                        }
-//                    }
-//
-//                    ToolbarItem(placement: .confirmationAction) {
-//                        Button("Or Tap me") {
-//                            // Button action
-//                        }
-//                    }
-                    ToolbarItemGroup {
-                        Button("Tap me") {
-                            // Button action
-                        }
-
-                        Button("Or Tap me") {
-                            // Button action
-                        }
-                    }
-                }
+            Text("Hello world!")
+                .navigationTitle($title)
+                .navigationBarTitleDisplayMode(.inline)
         }
+
     }
 }
