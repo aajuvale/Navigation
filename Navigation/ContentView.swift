@@ -11,14 +11,29 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            List(0..<100) { i in
-                Text("Row \(i)")
-            }
-            .navigationTitle("Title goes here")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(.blue)
-            .toolbarColorScheme(.dark)
-//            .toolbar(.hidden, for: .navigationBar)
+            Text("Hello World!")
+                .toolbar {
+//                    ToolbarItem(placement: .confirmationAction) {
+//                        Button("Tap me") {
+//                            // Button action
+//                        }
+//                    }
+//
+//                    ToolbarItem(placement: .confirmationAction) {
+//                        Button("Or Tap me") {
+//                            // Button action
+//                        }
+//                    }
+                    ToolbarItemGroup {
+                        Button("Tap me") {
+                            // Button action
+                        }
+
+                        Button("Or Tap me") {
+                            // Button action
+                        }
+                    }
+                }
         }
     }
 }
